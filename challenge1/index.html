@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Web Page</title>
+  </head>
+  <body>
+    <p>Click the button to run the JavaScript code:</p>
+    <button onclick="myFunction()">Run Code</button>
+    <p id="output"></p>
+
+    <script>
+      function myFunction() {
+        const value = "3";
+        const result = parseInt(value) + 4 + parseInt(value);
+        document.getElementById("output").innerHTML = result;
+      }
+    </script>
+  </body>
+</html>

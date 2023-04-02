@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Button Click Example</title>
+  </head>
+  <body>
+    <button onclick="greet()">Click me</button>
+    <script>
+      function greet() {
+        const nickname = "Timmy";
+        const firstname = "Timothy";
+        if (nickname) {
+          console.log(`Good Morning, ${nickname}!`);
+        } else if (firstname) {
+          console.log(`Good Morning, ${firstname}!`);
+        } else {
+          console.log("Good Morning!");
+        }
+      }
+    </script>
+  </body>
+</html>

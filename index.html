@@ -1,0 +1,105 @@
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <title>Challenge1</title>
+  </head>
+  <body>
+    <p>Click the button to run the JavaScript code:</p>
+    <button onclick="myFunction()">Run Code</button>
+    <p id="output"></p>
+
+    <script>
+      function myFunction() {
+        const value = "3";
+        const result = parseInt(value) + 4 + parseInt(value);
+        document.getElementById("output").innerHTML = result;
+      }
+    </script>
+  </body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <title>Challene 2</title>
+  </head>
+  <body>
+    <button onclick="greet()">Click me</button>
+    <script>
+      function greet() {
+        const nickname = "Timmy";
+        const firstname = "Timothy";
+        if (nickname) {
+          console.log(`Good Morning, ${nickname}!`);
+        } else if (firstname) {
+          console.log(`Good Morning, ${firstname}!`);
+        } else {
+          console.log("Good Morning!");
+        }
+      }
+    </script>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Challenge 3</title>
+  </head>
+  <body>
+    <h1>Challenge3</h1>
+    <script>
+      const leoName = "Leo";
+      const leoSurname = "Musvaire     ";
+      const leoBalance = "-9394";
+
+      const sarahName = "Sarah    ";
+      const sarahSurname = "Kleinhans";
+      const sarahBalance = "-4582.21000111";
+
+      const divider = "----------------------------------";
+
+      // Only change below this line
+      const owed = parseInt("R" + leoBalance + sarahBalance);
+      const leo =
+        leoName +
+        " " +
+        leoSurname.trim() +
+        " " +
+        "Owed" +
+        " " +
+        "R" +
+        " " +
+        sarahBalance;
+      const sarah =
+        sarahName +
+        " " +
+        sarahSurname.trim() +
+        " " +
+        "Owed" +
+        " " +
+        "R" +
+        " " +
+        sarahBalance;
+      const total = "Total amount owed: ";
+      const result =
+        "\n" +
+        leo +
+        "\n" +
+        sarah +
+        "\n" +
+        divider +
+        "\n" +
+        "\n" +
+        "  " +
+        total +
+        "R " +
+        parseFloat(Math.abs(owed)).toFixed(2) +
+        "\n" +
+        divider;
+
+      console.log(result);
+    </script>
+  </body>
+</html>
