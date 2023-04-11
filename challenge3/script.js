@@ -8,20 +8,25 @@
 
 // There are a few other formatting issues that need to be fixed, such as adding a newline character (\n) at the beginning of the string to create an empty line, and using two spaces to indent the total line.
 
-const leoName = "Leo";
-const leoSurname = "Musvaire";
-const leoBalance = "-9394";
+const leoName = 'Leo';
+const leoSurname = 'Musvaire     ';
+const leoBalance = '-9394';
 
-const sarahName = "Sarah";
-const sarahSurname = "Kleinhans";
-const sarahBalance = "-4582.21";
+const sarahName = 'Sarah    ';
+const sarahSurname = 'Kleinhans';
+const sarahBalance = '-4582.21000111';
 
-const divider = "----------------------------------\n";
+const divider = '----------------------------------\n';
 
-const owed = (parseFloat(leoBalance) + parseFloat(sarahBalance)).toFixed(2);
-const leo = `${leoName} ${leoSurname} (Owed: R ${leoBalance})\n`;
-const sarah = `${sarahName} ${sarahSurname} (Owed: R ${sarahBalance})\n`;
-const total = "  Total amount owed: R " + owed + "\n";
-const result = "\n" + leo + sarah + divider + total + divider;
+// Only change code below this line
+// Calculate the total amount owed by adding Leo's balance to Sarah's balance. The parseFloat() function is used to convert the balance strings to numbers before they are added together.
 
+const owed = parseFloat(leoBalance) + parseFloat(sarahBalance);
+const leo = `${leoName} ${leoSurname.trim()} (Owed: R ${Math.abs(parseFloat(leoBalance)).toFixed(2)})\n`;
+const sarah = `${sarahName.trim()} ${sarahSurname.trim()} (Owed: R ${Math.abs(parseFloat(sarahBalance)).toFixed(2)})\n`;
+// Define strings that represent Leo's and Sarah's names, surnames and balances, using string interpolation and the toFixed() method to ensure that the balances are formatted with 2 decimal places.
+const total = `  Total amount owed: R ${Math.abs(owed).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}\n`;
+// Define a string that represents the total amount owed, using Math.abs() to ensure that the number is positive and toLocaleString() to format it with commas and 2 decimal places.
+const result = '\n' + leo + sarah + divider + total + divider;
+// Combine the strings for Leo's name, surname and balance, Sarah's name, surname and balance, the divider, and the total amount owed, into one result string.
 console.log(result);
