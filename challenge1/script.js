@@ -1,5 +1,5 @@
 const value = "3";
-console.log(parseInt(value) + 4 + parseInt(value)); // Outputs 10
+console.log(parseInt(value) + 4 + parseInt(value));
 
 
 
